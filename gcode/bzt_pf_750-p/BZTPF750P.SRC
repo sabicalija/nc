@@ -1,14 +1,14 @@
 *FANUCM
 :SYSTEM=MILL
 :LEADING=FALSE
-:TRAILING=FALSE
+:TRAILING=TRUE
 :DECIMAL=TRUE
-:QUAD=FALSE
+:QUAD=NO181
 :SPACE=TRUE
 :ARCS=RADIAL
 :METRIC_SHIFT=1
 :G_LEFT_PLACES=3
-:G_RIGHT_PLACES=4
+:G_RIGHT_PLACES=3
 :G_INT_LEFT_PLACES=2
 :INT_LEADING=TRUE
 :INT_TRAILING=TRUE
@@ -82,7 +82,7 @@
 :ATTRDEFAULT=250
 :ATTREND
 *-----------------------------------
-:LIBRARY=D:\GIT\GITHUB\SABICALIJA\NC\GCODE\BZT_PF_750-P\BZT_PF_750-P.LIB
+:LIBRARY=D:\Git\github\SabicAlija\nc\gcode\bzt_pf_750-p\BZTPF750P.LIB
 :LIBRARY=C:\Program Files (x86)\UPG\millsrc\MILL.LIB
 *-----------------------------------
 :ATTRNAME=attachable
@@ -113,18 +113,40 @@
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=DRILLING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=x tool change
+:OPERLIST=y tool change
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=SPOT_DRILLING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=dwell
+:OPERLIST=x tool change
+:OPERLIST=y tool change
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=PECKING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=x tool change
+:OPERLIST=y tool change
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=TAPPING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=x tool change
+:OPERLIST=y tool change
+:OPERLIST=rigid tap
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
@@ -133,14 +155,30 @@
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=HIGH_SPEED_PECKING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=x tool change
+:OPERLIST=y tool change
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=VARIABLE_PECKING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=x tool change
+:OPERLIST=y tool change
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=REVERSE_TAPPING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=x tool change
+:OPERLIST=y tool change
+:OPERLIST=rigid tap
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
@@ -230,12 +268,13 @@
 :INCLUDE=C:\Program Files (x86)\UPG\millsrc\MILL.T32
 *------------------------------
 :SECTION=START_OF_TAPE
-:T:O<"%4LT":program_number><EOL>
+:Hello:
 :T:<N><G:17><G!:ENGMET><G!:40><G!:80><EOL>
 *
 :SECTION=INIT_TOOL_CHANGE_MILL
+:T:<N><G:00><G:91><G:28> Z0<EOL>
 :T:<N><TOOL_COMMENT><EOL>
-:T:<N><T><M:06><EOL>
+:T:<N>(<T><M:06>)<EOL>
 :T:<N><S!><M!:SPINDLE_DIR><EOL>
 :T:<N><G!:work_coord><EOL>
 :T:<N><M!:COOLANT_TYPE><EOL>
