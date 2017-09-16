@@ -1,0 +1,8 @@
+  /////////////////////////////////
+ /////    Post Info File     /////
+/////////////////////////////////
+
+PostName = LINUXCNC
+PostExtension = ngc
+ShortInfo = LINUXCNC_MILL_s.rtf
+LongInfo = LINUXCNC_MILL_l.rtf

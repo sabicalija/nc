@@ -1,0 +1,8 @@
+  /////////////////////////////////
+ /////    Post Info File     /////
+/////////////////////////////////
+
+PostName = LINUXCNC-RANDOM
+PostExtension = ngc
+ShortInfo = LINUXCNC-RANDOM_MILL_s.rtf
+LongInfo = LINUXCNC-RANDOM_MILL_l.rtf
