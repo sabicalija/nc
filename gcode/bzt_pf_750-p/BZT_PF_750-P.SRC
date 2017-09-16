@@ -82,7 +82,7 @@
 :ATTRDEFAULT=250
 :ATTREND
 *-----------------------------------
-:LIBRARY=C:\CAMWorksData\CAMWorksForSolidEdge2017x64\Posts\BZT PF 750-P.LIB
+:LIBRARY=D:\GIT\GITHUB\SABICALIJA\NC\GCODE\BZT_PF_750-P\BZT_PF_750-P.LIB
 :LIBRARY=C:\Program Files (x86)\UPG\millsrc\MILL.LIB
 *-----------------------------------
 :ATTRNAME=attachable
