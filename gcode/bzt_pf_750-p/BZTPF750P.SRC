@@ -151,6 +151,9 @@
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=BORING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
@@ -183,32 +186,53 @@
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=REAMING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=REAMING_DWELL
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=dwell
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=BORE_DWELL
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=dwell
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=BACK_BORING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=shift amount
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=FINE_BORING
+:OPERLIST=abs inc
+:OPERLIST=work coord
+:OPERLIST=coolant
+:OPERLIST=shift amount
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_LACE
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_POCKET
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_PROFILING
@@ -216,49 +240,59 @@
 :OPERLIST=display tool offset
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_MISC
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_UV_CUT
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_SLICE_CUT
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_ROUGH_CUT
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_CURVE_CUT
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_TOPO_CUT
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_FREEFORM_CUT
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_PENCIL_CUT
 :OPERLIST=abs inc
 :OPERLIST=work coord
+:OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_MACRO
+:OPERLIST=using work coord
 :OPEREND
 *-----------------------------------
 :OPERID=Post Program Stop
@@ -289,7 +323,7 @@
 *:SECTION=SUB_PRELOAD_TOOL_CHANGE_MILL
 *
 :SECTION=FIRST_RAPID_Z_MOVE_DOWN_MILL
-:T:<N><G:90><G:work_coord><G:00><Z!><EOL>
+:T:<N> G0<Z:OPR_Z_RAPID_PLANE><EOL>
 *
 *:SECTION=FIRST_RAPID_Z_PRELOAD_DOWN_MILL
 *
